@@ -13,6 +13,21 @@
 		8B5A3E972B65377800B7DD22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5A3E952B65377800B7DD22 /* Main.storyboard */; };
 		8B5A3E992B65377A00B7DD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B5A3E982B65377A00B7DD22 /* Assets.xcassets */; };
 		8B5A3E9C2B65377A00B7DD22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5A3E9A2B65377A00B7DD22 /* LaunchScreen.storyboard */; };
+		8B5A3EAA2B65F9EF00B7DD22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5A3EA92B65F9EF00B7DD22 /* SnapKit */; };
+		8B5A3EAC2B65F9EF00B7DD22 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5A3EAB2B65F9EF00B7DD22 /* SnapKit-Dynamic */; };
+		8B5A3EAF2B65FB7700B7DD22 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EAE2B65FB7700B7DD22 /* OnboardingViewController.swift */; };
+		8B5A3EB22B65FB8D00B7DD22 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EB12B65FB8D00B7DD22 /* SettingViewController.swift */; };
+		8B5A3EB52B65FBB100B7DD22 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EB42B65FBB100B7DD22 /* SearchViewController.swift */; };
+		8B5A3EB72B65FC8800B7DD22 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EB62B65FC8800B7DD22 /* UserDefaultManager.swift */; };
+		8B5A3EBE2B65FEF100B7DD22 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EB92B65FEF100B7DD22 /* UIImageView+Extension.swift */; };
+		8B5A3EBF2B65FEF100B7DD22 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EBA2B65FEF100B7DD22 /* UIButton+Extension.swift */; };
+		8B5A3EC02B65FEF100B7DD22 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EBB2B65FEF100B7DD22 /* UIViewController+Extension.swift */; };
+		8B5A3EC12B65FEF100B7DD22 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EBC2B65FEF100B7DD22 /* UITableViewCell+Extension.swift */; };
+		8B5A3EC22B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EBD2B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift */; };
+		8B5A3EC42B661A6200B7DD22 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EC32B661A6200B7DD22 /* Enumeration.swift */; };
+		8B5A3EC72B664D7A00B7DD22 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EC62B664D7A00B7DD22 /* RecentSearchTableViewCell.swift */; };
+		8B5A3ECA2B6669CE00B7DD22 /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */; };
+		8B5A3ECD2B666A1300B7DD22 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5A3ECC2B666A1300B7DD22 /* TextFieldEffects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,18 @@
 		8B5A3E982B65377A00B7DD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B5A3E9B2B65377A00B7DD22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B5A3E9D2B65377A00B7DD22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B5A3EAE2B65FB7700B7DD22 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8B5A3EB12B65FB8D00B7DD22 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8B5A3EB42B65FBB100B7DD22 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8B5A3EB62B65FC8800B7DD22 /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		8B5A3EB92B65FEF100B7DD22 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		8B5A3EBA2B65FEF100B7DD22 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8B5A3EBB2B65FEF100B7DD22 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8B5A3EBC2B65FEF100B7DD22 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		8B5A3EBD2B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		8B5A3EC32B661A6200B7DD22 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		8B5A3EC62B664D7A00B7DD22 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
+		8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5A3ECD2B666A1300B7DD22 /* TextFieldEffects in Frameworks */,
+				8B5A3EAA2B65F9EF00B7DD22 /* SnapKit in Frameworks */,
+				8B5A3EAC2B65F9EF00B7DD22 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +86,12 @@
 		8B5A3E8E2B65377800B7DD22 /* SeSAC Shopping(CodeBase) */ = {
 			isa = PBXGroup;
 			children = (
+				8B5A3EC82B6669BC00B7DD22 /* Profile */,
+				8B5A3EC52B664D3D00B7DD22 /* TableViewCell */,
+				8B5A3EB82B65FEF100B7DD22 /* Extension */,
+				8B5A3EB32B65FB9900B7DD22 /* Search */,
+				8B5A3EB02B65FB8300B7DD22 /* Setting */,
+				8B5A3EAD2B65FB5C00B7DD22 /* Onboarding */,
 				8B5A3E8F2B65377800B7DD22 /* AppDelegate.swift */,
 				8B5A3E912B65377800B7DD22 /* SceneDelegate.swift */,
 				8B5A3E932B65377800B7DD22 /* ViewController.swift */,
@@ -63,8 +99,62 @@
 				8B5A3E982B65377A00B7DD22 /* Assets.xcassets */,
 				8B5A3E9A2B65377A00B7DD22 /* LaunchScreen.storyboard */,
 				8B5A3E9D2B65377A00B7DD22 /* Info.plist */,
+				8B5A3EB62B65FC8800B7DD22 /* UserDefaultManager.swift */,
+				8B5A3EC32B661A6200B7DD22 /* Enumeration.swift */,
 			);
 			path = "SeSAC Shopping(CodeBase)";
+			sourceTree = "<group>";
+		};
+		8B5A3EAD2B65FB5C00B7DD22 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EAE2B65FB7700B7DD22 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8B5A3EB02B65FB8300B7DD22 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EB12B65FB8D00B7DD22 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		8B5A3EB32B65FB9900B7DD22 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EB42B65FBB100B7DD22 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8B5A3EB82B65FEF100B7DD22 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EB92B65FEF100B7DD22 /* UIImageView+Extension.swift */,
+				8B5A3EBA2B65FEF100B7DD22 /* UIButton+Extension.swift */,
+				8B5A3EBB2B65FEF100B7DD22 /* UIViewController+Extension.swift */,
+				8B5A3EBC2B65FEF100B7DD22 /* UITableViewCell+Extension.swift */,
+				8B5A3EBD2B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8B5A3EC52B664D3D00B7DD22 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EC62B664D7A00B7DD22 /* RecentSearchTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		8B5A3EC82B6669BC00B7DD22 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +173,11 @@
 			dependencies = (
 			);
 			name = "SeSAC Shopping(CodeBase)";
+			packageProductDependencies = (
+				8B5A3EA92B65F9EF00B7DD22 /* SnapKit */,
+				8B5A3EAB2B65F9EF00B7DD22 /* SnapKit-Dynamic */,
+				8B5A3ECC2B666A1300B7DD22 /* TextFieldEffects */,
+			);
 			productName = "SeSAC Shopping(CodeBase)";
 			productReference = 8B5A3E8C2B65377800B7DD22 /* SeSAC Shopping(CodeBase).app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +206,10 @@
 				Base,
 			);
 			mainGroup = 8B5A3E832B65377800B7DD22;
+			packageReferences = (
+				8B5A3EA82B65F9EF00B7DD22 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8B5A3ECB2B666A1300B7DD22 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 8B5A3E8D2B65377800B7DD22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +237,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5A3EC72B664D7A00B7DD22 /* RecentSearchTableViewCell.swift in Sources */,
+				8B5A3EB52B65FBB100B7DD22 /* SearchViewController.swift in Sources */,
+				8B5A3EB22B65FB8D00B7DD22 /* SettingViewController.swift in Sources */,
+				8B5A3EBE2B65FEF100B7DD22 /* UIImageView+Extension.swift in Sources */,
 				8B5A3E942B65377800B7DD22 /* ViewController.swift in Sources */,
 				8B5A3E902B65377800B7DD22 /* AppDelegate.swift in Sources */,
+				8B5A3EBF2B65FEF100B7DD22 /* UIButton+Extension.swift in Sources */,
+				8B5A3EC12B65FEF100B7DD22 /* UITableViewCell+Extension.swift in Sources */,
 				8B5A3E922B65377800B7DD22 /* SceneDelegate.swift in Sources */,
+				8B5A3EC22B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift in Sources */,
+				8B5A3EAF2B65FB7700B7DD22 /* OnboardingViewController.swift in Sources */,
+				8B5A3EC42B661A6200B7DD22 /* Enumeration.swift in Sources */,
+				8B5A3ECA2B6669CE00B7DD22 /* SettingProfileViewController.swift in Sources */,
+				8B5A3EC02B65FEF100B7DD22 /* UIViewController+Extension.swift in Sources */,
+				8B5A3EB72B65FC8800B7DD22 /* UserDefaultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +410,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +438,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +474,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B5A3EA82B65F9EF00B7DD22 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		8B5A3ECB2B666A1300B7DD22 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B5A3EA92B65F9EF00B7DD22 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B5A3EA82B65F9EF00B7DD22 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8B5A3EAB2B65F9EF00B7DD22 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B5A3EA82B65F9EF00B7DD22 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		8B5A3ECC2B666A1300B7DD22 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B5A3ECB2B666A1300B7DD22 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B5A3E842B65377800B7DD22 /* Project object */;
 }

@@ -13,10 +13,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        // 이미 사용자의 정보가 유저디폴트에 있다면 tabbarcontroller
+        if let nickname = UserDefaultManager.shared.ud.string(forKey: "UserNickname") {
+            guard let scene = (scene as? UIWindowScene) else { return }
+            
+            window = UIWindow(frame: scene.coordinateSpace.bounds)
+            window?.windowScene = scene
+            let tabBarVC = UITabBarController()
+            
+            let firstNav = UINavigationController(rootViewController: SearchViewController())
+            let secondNav = UINavigationController(rootViewController: SettingViewController())
+            
+            firstNav.tabBarItem = UITabBarItem(title: "검색", image: UIImage(systemName: "magnifyingglass"), tag: 0)
+            secondNav.tabBarItem = UITabBarItem(title: "설정", image: UIImage(systemName: "person"), tag: 1)
+            
+            tabBarVC.tabBar.tintColor = CustomColor.pointColor // 탭바의 tintcolor주기
+            
+            tabBarVC.viewControllers = [firstNav, secondNav]
+            
+            window?.rootViewController = tabBarVC
+            window?.makeKeyAndVisible()
+            
+            
+        } else {
+            guard let scene = (scene as? UIWindowScene) else { return }
+            
+            window = UIWindow(windowScene: scene)
+            let navi = UINavigationController(rootViewController: OnboardingViewController())
+            
+            window?.rootViewController = navi
+            window?.makeKeyAndVisible()
+
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
