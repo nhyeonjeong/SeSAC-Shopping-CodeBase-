@@ -41,19 +41,7 @@ class RecentSearchTableViewCell: UITableViewCell {
         recentLabel.text = text as? String
         self.tableView = tableview
     }
-    
-    @objc func xButtonClicked() {
-        print(#function)
-        var recentSearchList = UserDefaultManager.shared.ud.array(forKey: "RecentSearch")!
-        
-        recentSearchList.removeAll (where: {text in
-            text as! String == recentLabel.text!
-        })
-        // 유저디폴트에 다시 저장
-        UserDefaultManager.shared.ud.set(recentSearchList, forKey: "RecentSearch")
-        
-        tableView.reloadData() // 넘겨받은 tableview 다시 로드
-    }
+
 }
 
 extension RecentSearchTableViewCell {
@@ -74,7 +62,7 @@ extension RecentSearchTableViewCell {
         xButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         xButton.tintColor = CustomColor.textColor
         print("dfdf")
-        xButton.addTarget(self, action: #selector(xButtonClicked), for: .touchUpInside)
+
     }
     
     func configureConstraints() {
