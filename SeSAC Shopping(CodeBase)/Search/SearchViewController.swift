@@ -72,7 +72,19 @@ class SearchViewController: UIViewController {
             recentSearchTableView.isHidden = true
         }
     }
-
+    
+    @objc func xButtonClicked(_ sender: UIButton) {
+        print(#function)
+        var recentSearchList = UserDefaultManager.shared.ud.array(forKey: "RecentSearch")!
+    
+        // 받아온 xButton의 태그를 인덱스로 가지는 리스트 삭제
+        recentSearchList.remove(at: sender.tag)
+        
+        // 유저디폴트에 다시 저장
+        UserDefaultManager.shared.ud.set(recentSearchList, forKey: "RecentSearch")
+        
+        recentSearchTableView.reloadData() // 넘겨받은 tableview 다시 로드 -> 다시 로드하면서 tag값도 차례대로 다시 지정해준다.와 머임!!!! & remove(at:)하면 알아서 앞으로 땡겨쥼ㅎㅎ
+    }
 
 }
 
@@ -208,8 +220,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 유저디폴트 분기문
         let cell = recentSearchTableView.dequeueReusableCell(withIdentifier: RecentSearchTableViewCell.identifier, for: indexPath) as! RecentSearchTableViewCell
-  
+        
+        cell.xButton.tag = indexPath.row // tag지정
+        
         cell.configureCell(text: recentSearchList[indexPath.row], tableview: recentSearchTableView)
+        
+        cell.xButton.addTarget(self, action: #selector(xButtonClicked), for: .touchUpInside)
     
         return cell
     }
