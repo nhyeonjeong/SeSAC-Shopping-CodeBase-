@@ -30,6 +30,7 @@
 		8B5A3ECD2B666A1300B7DD22 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5A3ECC2B666A1300B7DD22 /* TextFieldEffects */; };
 		8B5A3F0A2B67E11300B7DD22 /* ProfileImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3F092B67E11300B7DD22 /* ProfileImageVIew.swift */; };
 		8B5A3F0C2B67EA4000B7DD22 /* PointColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3F0B2B67EA4000B7DD22 /* PointColorButton.swift */; };
+		8B5A3F0E2B67ECF100B7DD22 /* SelectProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3F0D2B67ECF100B7DD22 /* SelectProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
 		8B5A3F092B67E11300B7DD22 /* ProfileImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageVIew.swift; sourceTree = "<group>"; };
 		8B5A3F0B2B67EA4000B7DD22 /* PointColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointColorButton.swift; sourceTree = "<group>"; };
+		8B5A3F0D2B67ECF100B7DD22 /* SelectProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */,
+				8B5A3F0D2B67ECF100B7DD22 /* SelectProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				8B5A3EC42B661A6200B7DD22 /* Enumeration.swift in Sources */,
 				8B5A3ECA2B6669CE00B7DD22 /* SettingProfileViewController.swift in Sources */,
 				8B5A3EC02B65FEF100B7DD22 /* UIViewController+Extension.swift in Sources */,
+				8B5A3F0E2B67ECF100B7DD22 /* SelectProfileViewController.swift in Sources */,
 				8B5A3EB72B65FC8800B7DD22 /* UserDefaultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
