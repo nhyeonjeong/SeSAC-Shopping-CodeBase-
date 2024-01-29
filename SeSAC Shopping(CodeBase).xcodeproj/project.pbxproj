@@ -28,6 +28,8 @@
 		8B5A3EC72B664D7A00B7DD22 /* RecentSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EC62B664D7A00B7DD22 /* RecentSearchTableViewCell.swift */; };
 		8B5A3ECA2B6669CE00B7DD22 /* SettingProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */; };
 		8B5A3ECD2B666A1300B7DD22 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 8B5A3ECC2B666A1300B7DD22 /* TextFieldEffects */; };
+		8B5A3F0A2B67E11300B7DD22 /* ProfileImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3F092B67E11300B7DD22 /* ProfileImageVIew.swift */; };
+		8B5A3F0C2B67EA4000B7DD22 /* PointColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3F0B2B67EA4000B7DD22 /* PointColorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		8B5A3EC32B661A6200B7DD22 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
 		8B5A3EC62B664D7A00B7DD22 /* RecentSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchTableViewCell.swift; sourceTree = "<group>"; };
 		8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileViewController.swift; sourceTree = "<group>"; };
+		8B5A3F092B67E11300B7DD22 /* ProfileImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageVIew.swift; sourceTree = "<group>"; };
+		8B5A3F0B2B67EA4000B7DD22 /* PointColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointColorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		8B5A3E8E2B65377800B7DD22 /* SeSAC Shopping(CodeBase) */ = {
 			isa = PBXGroup;
 			children = (
+				8B5A3F082B67E10000B7DD22 /* CustomView */,
 				8B5A3EC82B6669BC00B7DD22 /* Profile */,
 				8B5A3EC52B664D3D00B7DD22 /* TableViewCell */,
 				8B5A3EB82B65FEF100B7DD22 /* Extension */,
@@ -155,6 +160,15 @@
 				8B5A3EC92B6669CE00B7DD22 /* SettingProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		8B5A3F082B67E10000B7DD22 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				8B5A3F092B67E11300B7DD22 /* ProfileImageVIew.swift */,
+				8B5A3F0B2B67EA4000B7DD22 /* PointColorButton.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5A3F0A2B67E11300B7DD22 /* ProfileImageVIew.swift in Sources */,
 				8B5A3EC72B664D7A00B7DD22 /* RecentSearchTableViewCell.swift in Sources */,
 				8B5A3EB52B65FBB100B7DD22 /* SearchViewController.swift in Sources */,
 				8B5A3EB22B65FB8D00B7DD22 /* SettingViewController.swift in Sources */,
@@ -248,6 +263,7 @@
 				8B5A3E922B65377800B7DD22 /* SceneDelegate.swift in Sources */,
 				8B5A3EC22B65FEF100B7DD22 /* UICollectionViewCell+Extension.swift in Sources */,
 				8B5A3EAF2B65FB7700B7DD22 /* OnboardingViewController.swift in Sources */,
+				8B5A3F0C2B67EA4000B7DD22 /* PointColorButton.swift in Sources */,
 				8B5A3EC42B661A6200B7DD22 /* Enumeration.swift in Sources */,
 				8B5A3ECA2B6669CE00B7DD22 /* SettingProfileViewController.swift in Sources */,
 				8B5A3EC02B65FEF100B7DD22 /* UIViewController+Extension.swift in Sources */,

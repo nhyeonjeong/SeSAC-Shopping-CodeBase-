@@ -12,7 +12,7 @@ class OnboardingViewController: UIViewController {
 
     let titleImageView = UIImageView()
     let mainImageView = UIImageView()
-    let startAppButton = UIButton()
+    let startAppButton = PointColorButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,8 @@ extension OnboardingViewController {
         mainImageView.image = UIImage(named: "onboarding")
         mainImageView.contentMode = .scaleAspectFill
         
-        startAppButton.configureButton(title: "시작하기")
+        startAppButton.title = "시작하기"
+        startAppButton.configureView()
         startAppButton.addTarget(self, action: #selector(startButtonClicked), for: .touchUpInside)
     }
     // 제약조건

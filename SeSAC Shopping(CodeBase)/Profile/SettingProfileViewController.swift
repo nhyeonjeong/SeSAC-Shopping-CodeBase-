@@ -11,12 +11,12 @@ import SnapKit
 
 class SettingProfileViewController: UIViewController {
 
-    let profileImageView = UIImageView()
+    let profileImageView = ProfileImageVIew(frame: .zero)
     let cameraImageView = UIImageView()
     
     let nicknameTextField = HoshiTextField()
     let statusLabel = UILabel()
-    let finishProfileButton = UIButton()
+    let finishProfileButton = PointColorButton()
     
     enum CheckNickname: String {
         case notFitLen = "2글자 이상 10글자 미만으로 설정해주세요"
@@ -72,7 +72,8 @@ extension SettingProfileViewController {
     func setRandomImage() {
 
         profileImageView.image = UIImage(named: imageName)
-        profileImageView.setProfileBoarder(selected: true)
+        profileImageView.isSelected = true
+        profileImageView.configureView()
         
     }
     
@@ -97,7 +98,8 @@ extension SettingProfileViewController {
         
         
         // 버튼
-        finishProfileButton.configureButton(title: "완료")
+        finishProfileButton.title = "완료"
+        finishProfileButton.configureView()
         finishProfileButton.addTarget(self, action: #selector(finishButtonClicked), for: .touchUpInside)
     }
     
@@ -109,9 +111,9 @@ extension SettingProfileViewController {
         }
         
         cameraImageView.snp.makeConstraints { make in
-            make.size.equalTo(10)
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.size.equalTo(30)
+            make.trailing.equalTo(profileImageView)
+            make.bottom.equalTo(profileImageView)
             
         }
         

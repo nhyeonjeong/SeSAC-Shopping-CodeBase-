@@ -14,7 +14,7 @@ class RecentSearchTableViewCell: UITableViewCell {
     let xButton = UIButton()
     
     var tableView: UITableView = UITableView()
-
+    // 코드로 할 때
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configureHierarchy()
