@@ -11,7 +11,7 @@ import SnapKit
 class SelectProfileViewController: UIViewController {
     
     let profileImageview = ProfileImageVIew(frame: .zero)
-    let profileCollectionView = UICollectionView()
+//    let profileCollectionView = UICollectionView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class SelectProfileViewController: UIViewController {
 extension SelectProfileViewController {
     func configureHierarchy() {
         view.addSubview(profileImageview)
-        view.addSubview(profileCollectionView)
+//        view.addSubview(profileCollectionView)
         
     }
     
@@ -46,10 +46,10 @@ extension SelectProfileViewController {
             make.centerX.equalToSuperview()
         }
         
-        profileCollectionView.snp.makeConstraints { make in
-            make.horizontalEdges.bottom.equalToSuperview()
-            make.top.equalTo(profileImageview.snp.bottom).inset(40)
-        }
+//        profileCollectionView.snp.makeConstraints { make in
+//            make.horizontalEdges.bottom.equalToSuperview()
+//            make.top.equalTo(profileImageview.snp.bottom).inset(40)
+//        }
         
         
     }
