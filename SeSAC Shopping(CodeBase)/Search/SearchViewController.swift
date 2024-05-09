@@ -180,11 +180,7 @@ extension SearchViewController: UISearchBarDelegate {
     // 서치바 return눌렀을 때 함수
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // 화면전환
-        let vc = UIHostingController(rootView: SearchResultView())
- 
-//        vc.searchText = searchBar.text!
-//        vc.callRequest(text: searchBar.text!, sort: Group.sim)
-        
+        let vc = UIHostingController(rootView: SearchResultView(searchText: searchBar.text!))
         navigationController?.pushViewController(vc, animated: true)
         
         print(#function)
