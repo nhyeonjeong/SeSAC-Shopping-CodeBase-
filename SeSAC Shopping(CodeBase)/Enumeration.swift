@@ -20,8 +20,6 @@ enum ImageStyle {
     static let goBack = UIImage(systemName: "chevron.backward")
     static let notLike = UIImage(systemName: "heart")
     static let like = UIImage(systemName: "heart.fill")
-    
-    
 }
 
 enum Group: String, CaseIterable {
