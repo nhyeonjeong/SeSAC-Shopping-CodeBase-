@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SearchViewController: UIViewController {
 
@@ -178,8 +179,14 @@ extension SearchViewController: UISearchBarDelegate {
     
     // 서치바 return눌렀을 때 함수
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // 화면전환 나중에 추가
-
+        // 화면전환
+        let vc = UIHostingController(rootView: SearchResultView())
+ 
+//        vc.searchText = searchBar.text!
+//        vc.callRequest(text: searchBar.text!, sort: Group.sim)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
         print(#function)
         // 유저디폴트에 저장
         let list = UserDefaultManager.shared.ud.array(forKey: "RecentSearch")

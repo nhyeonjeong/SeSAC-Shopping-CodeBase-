@@ -11,11 +11,11 @@ import SnapKit
 
 class SettingProfileViewController: UIViewController {
 
-    let profileImageView = ProfileImageVIew(frame: .zero)
+    let profileImageButton = PointColorButton()
     let cameraImageView = UIImageView()
     
     let nicknameTextField = HoshiTextField()
-    let statusLabel = UILabel()
+    let statusLabel = UILabel() // 닉네임을 잘 입력했는지 알려주는 문구
     let finishProfileButton = PointColorButton()
     
     enum CheckNickname: String {
@@ -32,7 +32,7 @@ class SettingProfileViewController: UIViewController {
     var nickName = ""
     
     /// 완료버튼을 누를 수 있는지 / 오토레이아웃연습때는 일단 true로
-    var isAbleButton = true
+    var isAbleButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class SettingProfileViewController: UIViewController {
         configureHierarchy()
         configureView()
         configureConstraints()
+        configureTextField()
     }
     
     /// 완료 버튼 눌렀을 때
@@ -58,12 +59,59 @@ class SettingProfileViewController: UIViewController {
             
         }
     }
+    
+    /// false : 길이가 맞지 않는 경우
+    func checkLen(text: String) -> Bool {
+        return text.count < 2 || text.count >= 10 ? false : true
+    }
+    /// false : 포함하면 안되는 문자 포함할 경우
+    func checkChar(text: String) -> Bool {
+        return text.contains("@") || text.contains("#") || text.contains("$") || text.contains("%") ? false : true
 
+    }
+    /// false : 숫자 포함할 경우
+    func checkNum(text: String) -> Bool {
+        for t in text {
+            if t.isNumber { return false }
+        }
+        
+        return true
+    }
+
+}
+extension SettingProfileViewController: UITextFieldDelegate {
+    
+    func configureTextField() {
+        nicknameTextField.delegate = self
+    }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        // 글자수 조건에 맞지 않을 때
+        print(#function)
+        let text = nicknameTextField.text!
+        
+        isAbleButton = false // 입력했으면 false로 초기화
+        
+        if !checkLen(text: text) {
+            statusLabel.text = CheckNickname.notFitLen.rawValue
+        } else if !checkChar(text: text) { // 특수문자 조건에 안맞으면
+            
+            statusLabel.text = CheckNickname.containSpecificChar.rawValue
+            
+        } else if !checkNum(text: text) {
+            statusLabel.text = CheckNickname.containNum.rawValue
+        } else { // 모든 조건을 만족할 때
+            print("correct")
+            statusLabel.text = "사용할 수 있는 닉네임이에요"
+            isAbleButton = true
+        }
+        statusLabel.reloadInputViews() // 안배웠는데 써봤다...(있는줄몰랐움)
+    }
 }
 
 extension SettingProfileViewController {
     func configureHierarchy() {
-        view.addSubview(profileImageView)
+        view.addSubview(profileImageButton)
         view.addSubview(cameraImageView)
         view.addSubview(nicknameTextField)
         view.addSubview(statusLabel)
@@ -71,9 +119,9 @@ extension SettingProfileViewController {
     }
     func setRandomImage() {
 
-        profileImageView.image = UIImage(named: imageName)
-        profileImageView.isSelected = true
-        profileImageView.configureView()
+        profileImageButton.setImage(UIImage(named: imageName), for: .normal)
+        profileImageButton.isSelected = true
+        profileImageButton.configureView()
         
     }
     
@@ -81,7 +129,7 @@ extension SettingProfileViewController {
         navigationItem.title = "프로필 설정"
         // 이미지
         setRandomImage()
-        profileImageView.isUserInteractionEnabled = true // imageView클릭 가능하도록
+//        profileImageView.isUserInteractionEnabled = true // imageView클릭 가능하도록
         cameraImageView.image = UIImage(named: "camera")
         
         // textfieldeffects
@@ -104,7 +152,7 @@ extension SettingProfileViewController {
     }
     
     func configureConstraints() {
-        profileImageView.snp.makeConstraints { make in
+        profileImageButton.snp.makeConstraints { make in
             make.size.equalTo(100)
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.centerX.equalToSuperview()
@@ -112,15 +160,15 @@ extension SettingProfileViewController {
         
         cameraImageView.snp.makeConstraints { make in
             make.size.equalTo(30)
-            make.trailing.equalTo(profileImageView)
-            make.bottom.equalTo(profileImageView)
+            make.trailing.equalTo(profileImageButton)
+            make.bottom.equalTo(profileImageButton)
             
         }
         
         nicknameTextField.snp.makeConstraints { make in
             make.horizontalEdges.equalTo(view.safeAreaInsets).inset(20)
             make.height.equalTo(55)
-            make.top.equalTo(profileImageView).inset(130)
+            make.top.equalTo(profileImageButton).inset(130)
             
         }
         
@@ -137,3 +185,5 @@ extension SettingProfileViewController {
         }
     }
 }
+
+

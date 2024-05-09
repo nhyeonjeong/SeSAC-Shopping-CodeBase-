@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B5545932BECF45300601489 /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5545922BECF45300601489 /* SearchResultView.swift */; };
 		8B5A3E902B65377800B7DD22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E8F2B65377800B7DD22 /* AppDelegate.swift */; };
 		8B5A3E922B65377800B7DD22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E912B65377800B7DD22 /* SceneDelegate.swift */; };
 		8B5A3E942B65377800B7DD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E932B65377800B7DD22 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B5545922BECF45300601489 /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		8B5A3E8C2B65377800B7DD22 /* SeSAC Shopping(CodeBase).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC Shopping(CodeBase).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5A3E8F2B65377800B7DD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B5A3E912B65377800B7DD22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8B5A3EB42B65FBB100B7DD22 /* SearchViewController.swift */,
+				8B5545922BECF45300601489 /* SearchResultView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				8B5A3F0A2B67E11300B7DD22 /* ProfileImageVIew.swift in Sources */,
 				8B5A3EC72B664D7A00B7DD22 /* RecentSearchTableViewCell.swift in Sources */,
 				8B5A3EB52B65FBB100B7DD22 /* SearchViewController.swift in Sources */,
+				8B5545932BECF45300601489 /* SearchResultView.swift in Sources */,
 				8B5A3EB22B65FB8D00B7DD22 /* SettingViewController.swift in Sources */,
 				8B5A3EBE2B65FEF100B7DD22 /* UIImageView+Extension.swift in Sources */,
 				8B5A3E942B65377800B7DD22 /* ViewController.swift in Sources */,
