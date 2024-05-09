@@ -20,7 +20,8 @@ final class SearchResultViewModel: ObservableObject {
     }
     func fetchSearchText(query: String, group: Group) async throws {
         do {
-            output.searchResult = try await Network.shared.requestAPI(query: query, sort: group, page: page) //보라색 오류..
+            output.searchResult.items += (try await Network.shared.requestAPI(query: query, sort: group, page: page).items) //보라색 오류..
+            page += 1
         } catch {
             //
         }

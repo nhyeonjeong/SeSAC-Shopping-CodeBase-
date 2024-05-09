@@ -20,7 +20,11 @@ final class Network {
         guard let url = URL(string: "https://openapi.naver.com/v1/search/shop.json?query=\(query)&display=30&sort=\(sort.getNameString())&start=\((page-1) * 30 + 1)") else {
             throw APIError.invalidURL
         }
-        let (data, response) = try await URLSession.shared.data(from: url)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.addValue(APIKey.clientID, forHTTPHeaderField: "X-Naver-Client-Id")
+        urlRequest.addValue(APIKey.clientSecret, forHTTPHeaderField: "X-Naver-Client-Secret")
+        
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard let response = response as? HTTPURLResponse else {
             throw APIError.noResponse
         }
@@ -28,6 +32,7 @@ final class Network {
             throw APIError.invalidResponse
         }
         let decodedData = try JSONDecoder().decode(Search.self, from: data)
+        print(decodedData)
         return decodedData
     }
 }

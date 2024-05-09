@@ -13,6 +13,7 @@
 		8B55459A2BED122E00601489 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5545992BED122E00601489 /* SearchModel.swift */; };
 		8B55459C2BED12E500601489 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8B55459B2BED12E500601489 /* .gitignore */; };
 		8B5545A22BED193A00601489 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5545A12BED193A00601489 /* SearchResultViewModel.swift */; };
+		8B5545A42BED1E3300601489 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5545A32BED1E3300601489 /* APIKey.swift */; };
 		8B5A3E902B65377800B7DD22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E8F2B65377800B7DD22 /* AppDelegate.swift */; };
 		8B5A3E922B65377800B7DD22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E912B65377800B7DD22 /* SceneDelegate.swift */; };
 		8B5A3E942B65377800B7DD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5A3E932B65377800B7DD22 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		8B5545992BED122E00601489 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		8B55459B2BED12E500601489 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8B5545A12BED193A00601489 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
+		8B5545A32BED1E3300601489 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		8B5A3E8C2B65377800B7DD22 /* SeSAC Shopping(CodeBase).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeSAC Shopping(CodeBase).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5A3E8F2B65377800B7DD22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B5A3E912B65377800B7DD22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				8B5A3E9D2B65377A00B7DD22 /* Info.plist */,
 				8B5A3EB62B65FC8800B7DD22 /* UserDefaultManager.swift */,
 				8B5A3EC32B661A6200B7DD22 /* Enumeration.swift */,
+				8B5545A32BED1E3300601489 /* APIKey.swift */,
 			);
 			path = "SeSAC Shopping(CodeBase)";
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				8B5A3EBE2B65FEF100B7DD22 /* UIImageView+Extension.swift in Sources */,
 				8B5A3E942B65377800B7DD22 /* ViewController.swift in Sources */,
 				8B55459A2BED122E00601489 /* SearchModel.swift in Sources */,
+				8B5545A42BED1E3300601489 /* APIKey.swift in Sources */,
 				8B5A3E902B65377800B7DD22 /* AppDelegate.swift in Sources */,
 				8B5A3EBF2B65FEF100B7DD22 /* UIButton+Extension.swift in Sources */,
 				8B5545A22BED193A00601489 /* SearchResultViewModel.swift in Sources */,

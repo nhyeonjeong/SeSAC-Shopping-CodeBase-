@@ -19,6 +19,11 @@ struct SearchResultView: View {
                 LazyVGrid(columns: columns) {
                     ForEach(viewModel.output.searchResult.items, id: \.productId) { item in
                         SearchResultRowView(item: item)
+                            .task {
+                                if item == viewModel.output.searchResult.items.last {
+                                    viewModel.input.viewOnAppear.send((searchText, .sim))
+                                }
+                            }
                     }
                 }
             }

@@ -10,10 +10,12 @@ import SwiftUI
 struct SearchResultRowView: View {
     let item: Item
     var body: some View {
-        VStack {
-            Image(systemName: "star")
-                .frame(height: 150)
+        VStack(alignment: .leading) {
+            AsyncImage(url: URL(string: item.image))
+                .clipped()
+                .aspectRatio(contentMode: .fill)
                 .border(.red)
+                .frame(maxWidth: .infinity, maxHeight: 200)
             
             Text(item.mallName)
             Text(item.title)
