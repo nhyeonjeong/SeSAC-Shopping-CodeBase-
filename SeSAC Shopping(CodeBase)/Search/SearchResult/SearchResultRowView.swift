@@ -11,16 +11,26 @@ struct SearchResultRowView: View {
     let item: Item
     var body: some View {
         VStack(alignment: .leading) {
-            AsyncImage(url: URL(string: item.image))
-                .clipped()
-                .aspectRatio(contentMode: .fill)
-                .border(.red)
-                .frame(maxWidth: .infinity, maxHeight: 200)
-            
+            AsyncImage(url: URL(string: item.image)) { image in
+                switch image {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                        .clipped()
+                case .failure(_):
+                    ProgressView()
+                case .empty:
+                    ProgressView()
+                @unknown default:
+                    EmptyView()
+                }
+            }
             Text(item.mallName)
             Text(item.title)
             Text(item.lprice)
-            
         }
     }
 }

@@ -4,10 +4,10 @@
 //
 //  Created by 남현정 on 2024/05/09.
 //
-
 import Foundation
 import Combine
 
+@MainActor
 final class SearchResultViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     
@@ -18,12 +18,13 @@ final class SearchResultViewModel: ObservableObject {
     init() {
         transform()
     }
-    func fetchSearchText(query: String, group: Group) async throws {
+    func fetchSearchText(query: String, group: Group) async {
         do {
             output.searchResult.items += (try await Network.shared.requestAPI(query: query, sort: group, page: page).items) //보라색 오류..
             page += 1
+
         } catch {
-            //
+            output.searchResult.items = []
         }
     }
 }
@@ -38,9 +39,9 @@ extension SearchResultViewModel {
     func transform() {
         input.viewOnAppear
             .sink {[weak self] searchText, category in
-                guard let self else { return } // 이거 있으니까 잘되는 이유가 뭐임???????
+                guard let self else { return }
                 Task {
-                    try? await self.fetchSearchText(query: searchText, group: category)
+                    await self.fetchSearchText(query: searchText, group: category)
                 }
             }.store(in: &cancellables)
     }
